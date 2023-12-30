@@ -17,3 +17,4 @@ const BlogDetails = () => {
 };
 
 export default BlogDetails;
+console.log('test');
