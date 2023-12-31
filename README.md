@@ -27,6 +27,24 @@ Fit Blog is a sleek and efficient blogging platform designed to streamline conte
 
 ## How to Use
 
+The easiest way to get started is to clone the repository:
+
+```bash
+# Get the latest snapshot
+git clone https://github.com/paskaeu25/fit-blog myproject
+
+# Change directory
+cd myproject
+
+# Install NPM dependencies
+npm install
+
+# Then simply start your app
+npm run start
+
+# Then start json server
+npm run server
+```
 
 
 
