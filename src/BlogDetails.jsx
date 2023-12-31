@@ -10,12 +10,18 @@ const BlogDetails = () => {
   } = useFetch(`http://localhost:8000/blogs/${id}`);
   const navigate = useNavigate();
 
-  const handleClick = () => {
-    fetch(`http://localhost:8000/blogs/${blog.id}`, {
-      method: 'DELETE',
-    }).then(() => {
-      navigate('/');
-    });
+  const handleClick = async () => {
+    try {
+      const res = await fetch(`http://localhost:8000/blogs/${blog.id}`, {
+        method: 'DELETE',
+      });
+
+      if (res.ok) {
+        navigate('/');
+      }
+    } catch (error) {
+      console.log(error.message);
+    }
   };
 
   return (
